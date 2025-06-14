@@ -20,6 +20,12 @@
       text-align: center;
     }
 
+    header img {
+      display: block;
+      margin: 0 auto 10px;
+      width: 150px;
+    }
+
     header h1 {
       margin: 0;
       font-size: 2.5em;
@@ -170,7 +176,6 @@
       }
     }
 
-    /* Video Gallery Styles */
     .video-gallery {
       margin-top: 40px;
     }
@@ -199,10 +204,9 @@
       text-align: center;
     }
 
-    .video-item iframe {
+    .video-item video {
       width: 100%;
       height: 170px;
-      border: none;
       border-radius: 6px;
     }
 
@@ -218,7 +222,7 @@
         width: 100%;
       }
 
-      .video-item iframe {
+      .video-item video {
         height: 200px;
       }
     }
@@ -226,6 +230,7 @@
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="EduProForge logo" />
     <h1>EduProForge</h1>
     <p>All Projects. All Fields. Expertly Done.</p>
   </header>
@@ -246,12 +251,14 @@
         <p>You will receive an email from us specifying the <strong>charges for the project</strong>.</p>
         <p>Pay <strong>50% of the amount</strong> charged for the project in the first <strong>4 working days</strong> and send us a screenshot of the payment.</p>
       </div>
-<div class="email">
-  Contact: <a href="eduproforge@gmail.com" style="color: #fff; text-decoration: underline;">eduproforge@gmail.com</a>
-</div>
-<div class="email">
-  Contact: <a href="eduproforge@outlook.com" style="color: #fff; text-decoration: underline;">eduproforge@outlook.com</a>
-</div>
+
+      <div class="email">
+        Contact: <a href="mailto:eduproforge@gmail.com" style="color: #fff; text-decoration: underline;">eduproforge@gmail.com</a>
+      </div>
+      <div class="email">
+        Contact: <a href="mailto:eduproforge@outlook.com" style="color: #fff; text-decoration: underline;">eduproforge@outlook.com</a>
+      </div>
+
       <div class="cta">
         <a href="https://docs.google.com/forms/d/1lVr_cIjpS9r_YQKkBfycPXrOee8QJz8Qi4r4t5TK1VY/edit" target="_blank">
           Project Registration
@@ -266,15 +273,19 @@
 
       <!-- Video Gallery Section -->
       <div class="video-gallery">
-        <h2 class="gallery-heading">Project Showcase</h2>
+        <h2 class="gallery-heading">EduProForge Speciality</h2>
         <div class="videos">
           <div class="video-item">
-            <iframe src="project.mp4" title="Project 1" allowfullscreen></iframe>
+            <video controls>
+              <source src="project.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
     </div>
-</div>
+  </div>
+
   <footer>
     &copy; 2025 EduProForge. All rights reserved.
   </footer>
