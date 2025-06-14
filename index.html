@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduProForge | All Projects. All Fields. Expertly Done.</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      color: #222;
+    }
+
+    header {
+      background-color: #174c8f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+      color: #ffcc00;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ffeb80;
+    }
+
+    .main-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      flex: 1 1 60%;
+      padding: 40px;
+      max-width: 900px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+
+    .tagline {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff5f6d, #ffc371);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    ul {
+      line-height: 1.8;
+      color: #444;
+      font-weight: 500;
+    }
+
+    ul li {
+      color: #0066cc;
+    }
+
+    .step-heading {
+      font-size: 1.4em;
+      margin-top: 30px;
+      font-weight: bold;
+      color: #cc0000;
+    }
+
+    .steps p {
+      margin: 8px 0;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .email {
+      margin-top: 20px;
+      font-size: 1.1em;
+      background-color: #ff5e00;
+      color: #fff;
+      padding: 10px 15px;
+      display: inline-block;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .qr {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .cta {
+      margin-top: 30px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #00b894;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #019875;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      background-color: #e1e8f0;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .ad-column {
+      flex: 1 1 30%;
+      max-width: 300px;
+      margin-left: 20px;
+      padding: 20px;
+      background-color: #fffbe6;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      height: fit-content;
+    }
+
+    .ad-column h3 {
+      color: #b22222;
+      margin-bottom: 15px;
+    }
+
+    .ad-column a {
+      display: block;
+      margin-bottom: 12px;
+      color: #0066cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .ad-column a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .main-wrapper {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .container, .ad-column {
+        max-width: 100%;
+        margin: 10px 0;
+      }
+
+      .ad-column {
+        order: 2;
+      }
+    }
+
+    /* Video Gallery Styles */
+    .video-gallery {
+      margin-top: 40px;
+    }
+
+    .gallery-heading {
+      font-size: 1.6em;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #174c8f;
+      text-align: center;
+    }
+
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-item {
+      width: 300px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .video-item iframe {
+      width: 100%;
+      height: 170px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .video-item p {
+      margin-top: 10px;
+      font-weight: 500;
+      color: #333;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      .video-item {
+        width: 100%;
+      }
+
+      .video-item iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EduProForge</h1>
+    <p>All Projects. All Fields. Expertly Done.</p>
+  </header>
+
+  <div class="main-wrapper">
+    <div class="container">
+      <p class="tagline">We handle everything from academic and internship projects to professional and official assignments across all formats, including web and programming.</p>
+      <ul>
+        <li>Academic, internship, and professional projects</li>
+        <li>All formats: web, programming, design, documentation</li>
+        <li>Certified experts in every field</li>
+        <li>Available for schools, colleges, and office needs</li>
+      </ul>
+
+      <div class="step-heading">Step-by-Step Work</div>
+      <div class="steps">
+        <p>You will receive your completed project in <strong>7–14 working days</strong>.</p>
+        <p>You will receive an email from us specifying the <strong>charges for the project</strong>.</p>
+        <p>Pay <strong>50% of the amount</strong> charged for the project in the first <strong>4 working days</strong> and send us a screenshot of the payment.</p>
+      </div>
+<div class="email">
+  Contact: <a href="eduproforge@gmail.com" style="color: #fff; text-decoration: underline;">eduproforge@gmail.com</a>
+</div>
+<div class="email">
+  Contact: <a href="eduproforge@outlook.com" style="color: #fff; text-decoration: underline;">eduproforge@outlook.com</a>
+</div>
+      <div class="cta">
+        <a href="https://docs.google.com/forms/d/1lVr_cIjpS9r_YQKkBfycPXrOee8QJz8Qi4r4t5TK1VY/edit" target="_blank">
+          Project Registration
+        </a>
+      </div>
+
+      <div class="qr">
+        <a href="https://docs.google.com/forms/d/1lVr_cIjpS9r_YQKkBfycPXrOee8QJz8Qi4r4t5TK1VY/edit" target="_blank">
+          <img src="qr-code.jpg" alt="EduProForge QR Code" width="150" />
+        </a>
+      </div>
+
+      <!-- Video Gallery Section -->
+      <div class="video-gallery">
+        <h2 class="gallery-heading">Project Showcase</h2>
+        <div class="videos">
+          <div class="video-item">
+            <iframe src="project.mp4" title="Project 1" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <footer>
+    &copy; 2025 EduProForge. All rights reserved.
+  </footer>
+</body>
+</html>
