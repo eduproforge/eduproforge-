@@ -4,282 +4,294 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EduProForge | All Projects. All Fields. Expertly Done.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-light: #f2f6ff;
+      --bg-dark: #0e1823;
+      --text-light: #111;
+      --text-dark: #f1f1f1;
+      --container-bg-light: rgba(255, 255, 255, 0.85);
+      --container-bg-dark: rgba(31, 41, 55, 0.85);
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f4f8;
-      color: #222;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-light);
       background-image: url('logo.png');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 400px;
+      background-size: 300px;
       background-attachment: fixed;
-      opacity: 1;
+      color: var(--text-light);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #102542;
+      padding: 1em 2em;
+      color: #fff;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.5em;
+      color: #ffcb05;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #ffcb05;
+    }
+
+    .toggle-btn {
+      background-color: #ffcb05;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background-color: #e0b700;
     }
 
     header {
-      background-color: #174c8f;
+      background: linear-gradient(90deg, #4e54c8, #8f94fb);
       color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 3em 1em;
     }
 
     header img {
-      display: block;
-      margin: 0 auto 10px;
-      width: 150px;
+      width: 120px;
+      margin-bottom: 1em;
     }
 
     header h1 {
+      font-size: 2.8em;
       margin: 0;
-      font-size: 2.5em;
-      letter-spacing: 1px;
-      color: #ffcc00;
     }
 
     header p {
       font-size: 1.2em;
-      color: #ffeb80;
+      margin-top: 0.5em;
     }
 
     .main-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 20px;
+      padding: 2em;
+      gap: 2em;
+      background-color: var(--container-bg-light);
+      border-radius: 12px;
+      backdrop-filter: blur(3px);
+      transition: background-color 0.3s ease;
+    }
+
+    body.dark .main-wrapper {
+      background-color: var(--container-bg-dark);
     }
 
     .container {
-      flex: 1 1 60%;
-      padding: 40px;
+      padding: 2em;
       max-width: 900px;
-      background-color: #ffffffcc;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      box-sizing: border-box;
+      width: 100%;
     }
 
     .tagline {
       font-size: 1.5em;
-      margin-bottom: 20px;
-      font-weight: bold;
-      background: linear-gradient(90deg, #ff5f6d, #ffc371);
+      font-weight: 700;
+      background: linear-gradient(90deg, #fc466b, #3f5efb);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-
-    ul {
-      line-height: 1.8;
-      color: #444;
-      font-weight: 500;
+      margin-bottom: 1em;
     }
 
     ul li {
-      color: #0066cc;
+      color: #102542;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+
+    body.dark ul li {
+      color: #ddd;
     }
 
     .step-heading {
-      font-size: 1.4em;
-      margin-top: 30px;
-      font-weight: bold;
-      color: #cc0000;
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #e63946;
+      margin-top: 1.5em;
     }
 
     .steps p {
-      margin: 8px 0;
-      color: #333;
       font-weight: 500;
+      margin: 0.5em 0;
     }
 
     .email {
-      margin-top: 20px;
-      font-size: 1.1em;
-      background-color: #ff5e00;
+      background-color: #ff6b6b;
       color: #fff;
-      padding: 10px 15px;
+      padding: 0.75em 1em;
+      border-radius: 6px;
       display: inline-block;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .qr {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .cta {
-      margin-top: 30px;
+      margin-top: 1em;
+      font-weight: 600;
     }
 
     .cta a {
       display: inline-block;
-      padding: 12px 20px;
       background-color: #00b894;
-      color: #fff;
-      text-decoration: none;
+      color: white;
       font-weight: bold;
+      padding: 0.8em 1.5em;
       border-radius: 6px;
-      transition: background-color 0.3s ease;
+      text-decoration: none;
+      margin-top: 1.5em;
     }
 
     .cta a:hover {
       background-color: #019875;
     }
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
+    .qr {
       text-align: center;
-      background-color: #e1e8f0;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    .ad-column {
-      flex: 1 1 30%;
-      max-width: 300px;
-      margin-left: 20px;
-      padding: 20px;
-      background-color: #fffbe6;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      box-sizing: border-box;
-      height: fit-content;
-    }
-
-    .ad-column h3 {
-      color: #b22222;
-      margin-bottom: 15px;
-    }
-
-    .ad-column a {
-      display: block;
-      margin-bottom: 12px;
-      color: #0066cc;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .ad-column a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 900px) {
-      .main-wrapper {
-        flex-direction: column;
-        padding: 10px;
-      }
-
-      .container, .ad-column {
-        max-width: 100%;
-        margin: 10px 0;
-      }
-
-      .ad-column {
-        order: 2;
-      }
+      margin-top: 2em;
     }
 
     .video-gallery {
-      margin-top: 40px;
+      margin-top: 3em;
     }
 
     .gallery-heading {
-      font-size: 1.6em;
-      margin-bottom: 20px;
-      font-weight: bold;
-      color: #174c8f;
       text-align: center;
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #174c8f;
+      margin-bottom: 1em;
     }
 
     .videos {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 1.5em;
       justify-content: center;
     }
 
     .video-item {
       width: 300px;
-      background-color: #ffffff;
+      background-color: #fff;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 10px;
       text-align: center;
     }
 
     .video-item video {
       width: 100%;
-      height: 170px;
       border-radius: 6px;
     }
 
     .video-item p {
-      margin-top: 10px;
       font-weight: 500;
       color: #333;
       font-size: 0.95em;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #102542;
+      color: #ccc;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+      font-size: 0.9em;
     }
 
     @media (max-width: 768px) {
-      .video-item {
-        width: 100%;
+      nav ul {
+        flex-direction: column;
+        gap: 0.5em;
       }
 
-      .video-item video {
-        height: 200px;
+      .video-item {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <div class="logo">EduProForge</div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Mode</button>
+  </nav>
+
   <header>
-    <img src="logo.png" alt="EduProForge logo" />
-    <h1>EduProForge</h1>
-    <p>All Projects. All Fields. Expertly Done.</p>
+    <img src="logo.png" alt="EduProForge Logo" />
+    <h1>All Projects. All Fields. Expertly Done.</h1>
+    <p>Academic | Internship | Professional | Office</p>
   </header>
 
   <div class="main-wrapper">
-    <div class="container">
-      <p class="tagline">We handle everything from academic and internship projects to professional and official assignments across all formats, including web and programming.</p>
+    <div class="container" id="services">
+      <p class="tagline">We deliver top-tier academic and professional project support across every field and format.</p>
       <ul>
-        <li>Academic, internship, and professional projects</li>
-        <li>All formats: web, programming, design, documentation</li>
-        <li>Certified experts in every field</li>
-        <li>Available for schools, colleges, and office needs</li>
+        <li>Expert-driven project execution</li>
+        <li>Web, software, documentation, and design support</li>
+        <li>For schools, colleges, and professionals</li>
       </ul>
 
-      <div class="step-heading">Step-by-Step Work</div>
+      <div class="step-heading">How It Works</div>
       <div class="steps">
-        <p>You will receive your completed project in <strong>7–14 working days</strong>.</p>
-        <p>You will receive an email from us specifying the <strong>charges for the project</strong>.</p>
-        <p>Pay <strong>50% of the amount</strong> charged for the project in the first <strong>4 working days</strong> and send us a screenshot of the payment.</p>
+        <p><strong>Step 1:</strong> Register your project via the form</p>
+        <p><strong>Step 2:</strong> Receive a quote within 24 hours</p>
+        <p><strong>Step 3:</strong> Pay 50% advance and track progress</p>
       </div>
 
-      <div class="email">
-        Contact: <a href="mailto:eduproforge@gmail.com" style="color: #fff; text-decoration: underline;">eduproforge@gmail.com</a>
-      </div>
-      <div class="email">
-        Contact: <a href="mailto:eduproforge@outlook.com" style="color: #fff; text-decoration: underline;">eduproforge@outlook.com</a>
-      </div>
-
-      <div class="cta">
-        <a href="https://docs.google.com/forms/d/1lVr_cIjpS9r_YQKkBfycPXrOee8QJz8Qi4r4t5TK1VY/edit" target="_blank">
-          Project Registration
-        </a>
+      <div class="cta" id="register">
+        <a href="https://docs.google.com/forms/d/1lVr_cIjpS9r_YQKkBfycPXrOee8QJz8Qi4r4t5TK1VY/edit" target="_blank">Register Your Project</a>
       </div>
 
       <div class="qr">
         <a href="https://docs.google.com/forms/d/1lVr_cIjpS9r_YQKkBfycPXrOee8QJz8Qi4r4t5TK1VY/edit" target="_blank">
-          <img src="qr-code.jpg" alt="EduProForge QR Code" width="150" />
+          <img src="qr-code.jpg" alt="Registration QR Code" width="150" />
         </a>
       </div>
 
-      <!-- Video Gallery Section -->
       <div class="video-gallery">
-        <h2 class="gallery-heading">EduProForge Speciality</h2>
+        <h2 class="gallery-heading">Our Work in Action</h2>
         <div class="videos">
           <div class="video-item">
             <video controls>
@@ -289,11 +301,24 @@
           </div>
         </div>
       </div>
+
+      <div class="email" id="contact">
+        Email: <a style="color: #fff; text-decoration: underline;">eduproforge@gmail.com</a>
+      </div>
+      <div class="email">
+        Email: <a style="color: #fff; text-decoration: underline;">eduproforge@outlook.com</a>
+      </div>
     </div>
   </div>
 
   <footer>
     &copy; 2025 EduProForge. All rights reserved.
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </body>
 </html>
